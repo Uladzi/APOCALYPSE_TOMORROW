@@ -1,0 +1,79 @@
+@keyframes anim-survival-tips {
+    0% {
+        opacity: 0;
+        filter: blur(25px)
+    }
+    10% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        filter: blur(1px)
+    }
+}
+
+.survival-tips-section {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.survival-tips-section .row {
+    padding-top: 4rem;
+    align-content: space-evenly;
+    height: 100%;
+    min-height: 80vh;
+}
+
+.anim-btns-survival-tips {
+    opacity: 0;
+    animation: show-font-opacity 2s 0.5s forwards;
+}
+
+.survival-tips-section .anim-survival-tips-row {
+    min-height: 100%;
+}
+
+.survival-tips-section .btn {
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.survival-tips-section .col-12 .btn {
+    font-size: 1.5rem;
+    width: auto;
+}
+
+.survival-tips-section .card-body {
+    font-style: italic;
+}
+
+.anim-survival {
+    position: absolute;
+    font-size: 6rem;
+    margin-left: calc(50% - 162px);
+    color: black;
+    font-family: none;
+    animation: anim-survival-tips 5s infinite alternate-reverse;
+}
+
+.anim-tips {
+    position: absolute;
+    font-size: 6rem;
+    margin-left: calc(50% - 191px);
+    color: black;
+    font-family: none;
+    animation: anim-survival-tips 5s infinite alternate;
+}
+
+@media only all and (max-width: 765px) {
+    .survival-tips-section .row {
+        padding-top: 0;
+    }
+}

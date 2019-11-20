@@ -1,0 +1,154 @@
+    @import "_about_us_section.css";
+    @import "_about_apocalypse_section.css";
+    @import "_survival_tips_section.css";
+    @import "_extra_info_section.css";
+    @import "_contacts_section.css";
+    /* Подключили шрифт */
+    
+    @font-face {
+        font-family: "Oswald";
+        src: url(../assets/fonts/Oswald.ttf);
+    }
+    /* Анимируем шрифты на стартовой странице */
+    
+    @keyframes show-font-opacity {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+    
+    @keyframes blink-caret {
+        from,
+        to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #dc3545;
+        }
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    header .container-fluid {
+        padding: 0;
+    }
+    
+    header .row {
+        margin: 0;
+    }
+    
+    header .col {
+        padding: 0;
+    }
+    
+    .navbar {
+        font-family: 'Oswald', sans-serif;
+        font-size: large;
+    }
+    /* Стилизуем видео-фон на стартовой странице */
+    
+    .video-background-holder {
+        position: relative;
+        background-color: black;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        font-family: 'Oswald', sans-serif;
+    }
+    
+    .video-background-holder video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    .video-background-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .video-background-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0.5;
+        z-index: 1;
+    }
+    /* Цвет кавычек APOCALYPSE TOMORROW */
+    
+    span {
+        color: #dc3545;
+    }
+    
+    .shadow {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .65)!important;
+    }
+    
+    .anim-font-opacity {
+        opacity: 0;
+        animation: show-font-opacity 4s forwards;
+    }
+    
+    .anim-typewriter {
+        display: inline-block;
+    }
+    
+    .anim-typewriter h2 {
+        opacity: 0;
+        overflow: hidden;
+        border-right: .12em solid #dc3545;
+        white-space: nowrap;
+        animation: show-font-opacity 2s 2s forwards, typing 4.5s 2s steps(30, end), blink-caret .5s step-end infinite;
+    }
+    
+    .anim-font-apocalypse h1 {
+        opacity: 0;
+        animation: show-font-opacity 2s 8s forwards;
+    }
+    
+    .anim-font-welcome {
+        opacity: 0;
+        animation: show-font-opacity 2s 10s forwards;
+    }
+    
+    @media only all and (max-width: 430px) {
+        .navbar {
+            padding: 0;
+            font-size: smaller;
+        }
+        .anim-font-opacity h2 {
+            font-size: 2rem;
+        }
+        .anim-typewriter h2 {
+            font-size: 1.5rem;
+        }
+        .anim-font-apocalypse h1 {
+            font-size: 3rem;
+        }
+    }

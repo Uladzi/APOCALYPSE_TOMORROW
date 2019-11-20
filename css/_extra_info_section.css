@@ -1,0 +1,408 @@
+.extra-info-section {
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    font-family: Oswald;
+    padding-bottom: 2rem;
+}
+
+.extra-info-section .row {
+    padding-top: 5rem;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.extra-info-section .row .col {
+    height: 100%;
+}
+
+
+/* Аккордион - Фильмы */
+
+.accordion-films {
+    width: 100%;
+    height: 350px;
+}
+
+.accordion-films ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+    border: 2px solid white;
+}
+
+.accordion-films ul li {
+    display: table-cell;
+    position: relative;
+    width: 90%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all 500ms ease;
+    border: 1px solid black;
+}
+
+.accordion-films ul li div a {
+    display: block;
+    height: 350px;
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 500ms ease;
+}
+
+.accordion-films ul li div a * {
+    opacity: 0;
+    margin: 0;
+    position: relative;
+    z-index: 5;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.accordion-films ul li div a h2 {
+    font-family: Oswald;
+    text-overflow: clip;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2rem;
+    top: 260px;
+}
+
+.accordion-films ul li div a p {
+    font-size: 1rem;
+    top: 260px;
+}
+
+.accordion-films ul li:nth-child(1) {
+    background-image: url("../assets/media/wandering_earth.jpg");
+}
+
+.accordion-films ul li:nth-child(2) {
+    background-image: url("../assets/media/bird_box.jpg");
+}
+
+.accordion-films ul li:nth-child(3) {
+    background-image: url("../assets/media/cargo.jpg");
+}
+
+.accordion-films ul li:nth-child(4) {
+    background-image: url("../assets/media/cloverfild.jpg");
+}
+
+.accordion-films ul li:nth-child(5) {
+    background-image: url("../assets/media/these_final_hours.jpg");
+}
+
+.accordion-films ul li:nth-child(6) {
+    background-image: url("../assets/media/turbo_kid.jpg");
+}
+
+.accordion-films ul li:nth-child(7) {
+    background-image: url("../assets/media/planet_of_apes.jpg");
+}
+
+.accordion-films ul li:nth-child(8) {
+    background-image: url("../assets/media/this_is_the_end.jpg");
+}
+
+.accordion-films ul li:nth-child(9) {
+    background-image: url("../assets/media/snowpiercer.jpg");
+}
+
+.accordion-films ul li:nth-child(10) {
+    background-image: url("../assets/media/friend_for_the_end.jpg");
+}
+
+.accordion-films ul li:nth-child(11) {
+    background-image: url("../assets/media/melancholia.jpg");
+}
+
+.accordion-films ul li:nth-child(12) {
+    background-image: url("../assets/media/take_shelter.jpg");
+}
+
+.accordion-films ul li:nth-child(13) {
+    background-image: url("../assets/media/devide.jpg");
+}
+
+.accordion-films ul li:nth-child(14) {
+    background-image: url("../assets/media/the_day.jpg");
+}
+
+.accordion-films ul li:nth-child(15) {
+    background-image: url("../assets/media/legion.jpg");
+}
+
+.accordion-films ul li:nth-child(16) {
+    background-image: url("../assets/media/stake_land.jpg");
+}
+
+.accordion-films ul li:nth-child(17) {
+    background-image: url("../assets/media/the_road.jpg");
+}
+
+.accordion-films ul li:nth-child(18) {
+    background-image: url("../assets/media/zombieland.jpg");
+}
+
+.accordion-films ul li:nth-child(19) {
+    background-image: url("../assets/media/carriers.jpg");
+}
+
+.accordion-films ul li:nth-child(20) {
+    background-image: url("../assets/media/walle.jpg");
+}
+
+.accordion-films ul li:nth-child(21) {
+    background-image: url("../assets/media/sunshine.jpg");
+}
+
+.accordion-films ul li:nth-child(22) {
+    background-image: url("../assets/media/i_am_legend.jpg");
+}
+
+.accordion-films ul li:nth-child(23) {
+    background-image: url("../assets/media/day_after_tomorrow.jpg");
+}
+
+.accordion-films ul li:nth-child(24) {
+    background-image: url("../assets/media/28_days.jpg");
+}
+
+.accordion-films ul:hover li {
+    width: 8%;
+}
+
+.accordion-films ul:hover li a * {
+    opacity: 0;
+}
+
+.accordion-films ul:hover li:hover {
+    width: 95%;
+}
+
+.accordion-films ul:hover li:hover a {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.accordion-films ul:hover li:hover a * {
+    opacity: 1 !important;
+}
+
+
+/*  Сериалы */
+
+.accordion-series ul li:nth-child(1) {
+    background-image: url("../assets/media/daybreak.jpg");
+}
+
+.accordion-series ul li:nth-child(2) {
+    background-image: url("../assets/media/black_summer.jpg");
+}
+
+.accordion-series ul li:nth-child(3) {
+    background-image: url("../assets/media/lost_in_space.jpg");
+}
+
+.accordion-series ul li:nth-child(4) {
+    background-image: url("../assets/media/the_rain.jpg");
+}
+
+.accordion-series ul li:nth-child(5) {
+    background-image: url("../assets/media/the_handamaid\'s_tale.jpg");
+}
+
+.accordion-series ul li:nth-child(6) {
+    background-image: url("../assets/media/colony.jpg");
+}
+
+.accordion-series ul li:nth-child(7) {
+    background-image: url("../assets/media/van_helsing.jpg");
+}
+
+.accordion-series ul li:nth-child(8) {
+    background-image: url("../assets/media/shannara_chronicles.jpg");
+}
+
+.accordion-series ul li:nth-child(9) {
+    background-image: url("../assets/media/3_percent.jpg");
+}
+
+.accordion-series ul li:nth-child(10) {
+    background-image: url("../assets/media/z_nation.jpg");
+}
+
+.accordion-series ul li:nth-child(11) {
+    background-image: url("../assets/media/into_the_badlands.jpg");
+}
+
+.accordion-series ul li:nth-child(12) {
+    background-image: url("../assets/media/mr_robot.jpg");
+}
+
+.accordion-series ul li:nth-child(14) {
+    background-image: url("../assets/media/last_man_on_earth.jpg");
+}
+
+.accordion-series ul li:nth-child(14) {
+    background-image: url("../assets/media/zoo.jpg");
+}
+
+.accordion-series ul li:nth-child(15) {
+    background-image: url("../assets/media/the_100.jpg");
+}
+
+.accordion-series ul li:nth-child(16) {
+    background-image: url("../assets/media/attack_on_titan.jpg");
+}
+
+.accordion-series ul li:nth-child(17) {
+    background-image: url("../assets/media/black_mirror.jpg");
+}
+
+.accordion-series ul li:nth-child(18) {
+    background-image: url("../assets/media/the_walking_dead.jpg");
+}
+
+.accordion-series ul li:nth-child(19) {
+    background-image: url("../assets/media/jericho.jpg");
+}
+
+
+/* Книги */
+
+.accordion-books ul li div a * {
+    opacity: 1;
+    transform: rotate(-90deg);
+    overflow: visible;
+}
+
+.accordion-books ul li div a h2 {
+    opacity: 0;
+}
+
+.accordion-books ul li div a p {
+    font-size: 1.5rem;
+}
+
+.accordion-books ul:hover li:hover {
+    width: 50%;
+}
+
+.accordion-books ul:hover li:hover a {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.accordion-books ul:hover li:hover a * {
+    transform: rotate(0deg);
+    overflow: hidden;
+}
+
+.accordion-books ul li:nth-child(1) {
+    background: #2e1f54;
+}
+
+.accordion-books ul li:nth-child(2) {
+    background: #52057f;
+}
+
+.accordion-books ul li:nth-child(3) {
+    background: #bf033b;
+}
+
+.accordion-books ul li:nth-child(4) {
+    background: #f00a36;
+}
+
+.accordion-books ul li:nth-child(5) {
+    background: #ed3b21;
+}
+
+.accordion-books ul li:nth-child(6) {
+    background: #ff6908;
+}
+
+.accordion-books ul li:nth-child(7) {
+    background: #ffc719;
+}
+
+.accordion-books ul li:nth-child(8) {
+    background: #598c14;
+}
+
+.accordion-books ul li:nth-child(9) {
+    background: #335238;
+}
+
+.accordion-books ul li:nth-child(10) {
+    background: #4a8594;
+}
+
+.accordion-books ul li:nth-child(11) {
+    background: #051736;
+}
+
+.accordion-books ul li:nth-child(12) {
+    background: #000000;
+}
+
+.accordion-books ul li:nth-child(13) {
+    background: #706357;
+}
+
+.accordion-books ul li:nth-child(14) {
+    background: #b0a696;
+}
+
+.accordion-books ul li:nth-child(15) {
+    background: #60afdc;
+}
+
+@media only all and (max-width: 765px) {
+    .accordion-films {
+        height: 100%;
+        padding-bottom: 1rem;
+    }
+    .accordion-films ul li,
+    .accordion-films ul li:hover,
+    .accordion-films ul:hover li,
+    .accordion-films ul:hover li:hover {
+        display: flex;
+        flex-direction: column;
+        height: 2.5rem;
+        width: 100%;
+        -webkit-transition: none;
+        transition: none;
+        border: 2px solid black;
+    }
+    .accordion-films ul li div a {
+        height: 2.5rem;
+    }
+    .accordion-films ul li div a * {
+        opacity: 1;
+    }
+    .accordion-films ul li div a h2 {
+        text-align: center;
+        font-size: 1rem;
+        top: 0.15rem;
+    }
+    .accordion-films ul li div a p {
+        font-family: Oswald;
+        text-align: center;
+        font-size: 0.5rem;
+        top: 0.1rem;
+    }
+    .accordion-books ul li div a * {
+        transform: rotate(0deg);
+    }
+    .accordion-books ul:hover li:hover a * {
+        transform: rotate(0deg);
+    }
+}
