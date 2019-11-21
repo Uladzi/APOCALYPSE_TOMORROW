@@ -12,11 +12,11 @@ document.querySelector(".nav-item:nth-child(4)").addEventListener("click", () =>
     document.querySelector(".not-anim-btns-survival-tips").classList.add("anim-btns-survival-tips")
 })
 
-// // Внезапня картинка :) 
-// const appearSuddenlyPic = () => {
-//     const newImg = document.createElement('img');
-//     newImg.src = 'assets/media/wall.jpg'
-//     newImg.id = 'suddenly-pic';
-//     document.querySelector("h1").before(newImg);
-// }
-// setTimeout(appearSuddenlyPic, 2000)
+// Внезапня картинка :) 
+const appearSuddenlyPic = () => {
+    const newImg = document.createElement('img');
+    newImg.src = 'assets/media/blood_hand.png'
+    newImg.id = 'suddenly-pic';
+    document.querySelector("nav img").before(newImg);
+}
+setTimeout(appearSuddenlyPic, 12000)

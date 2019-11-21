@@ -16,6 +16,18 @@
     }
     /* Анимируем шрифты на стартовой странице */
     
+    @keyframes suddenly-pic {
+        from {
+            width: 0;
+        }
+        50% {
+            width: 20rem;
+        }
+        to {
+            width: 3rem;
+        }
+    }
+    
     @keyframes show-font-opacity {
         from {
             opacity: 0;
@@ -47,9 +59,12 @@
     html {
         scroll-behavior: smooth;
     }
-    /* #suddenly-pic {
+    
+    #suddenly-pic {
+        top: 2rem;
         position: fixed;
-    } */
+        animation: suddenly-pic 2s forwards;
+    }
     
     header .container-fluid {
         padding: 0;
