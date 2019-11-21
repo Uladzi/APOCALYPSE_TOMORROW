@@ -178,7 +178,7 @@
 }
 
 .accordion-films ul:hover li {
-    width: 8%;
+    width: 6%;
 }
 
 .accordion-films ul:hover li a * {
@@ -186,7 +186,7 @@
 }
 
 .accordion-films ul:hover li:hover {
-    width: 95%;
+    width: 99%;
 }
 
 .accordion-films ul:hover li:hover a {

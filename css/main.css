@@ -161,7 +161,6 @@
     @media only all and (max-width: 430px) {
         .navbar {
             padding: 0;
-            font-size: smaller;
         }
         .anim-font-opacity h2 {
             font-size: 2rem;
