@@ -4,6 +4,7 @@
     width: 100%;
     font-family: Oswald;
     padding-bottom: 2rem;
+    border-bottom: 1px solid white;
 }
 
 .extra-info-section .row {
@@ -366,6 +367,9 @@
 }
 
 @media only all and (max-width: 765px) {
+    .extra-text-class {
+        font-size: 2.5rem;
+    }
     .accordion-films {
         height: 100%;
         padding-bottom: 1rem;
@@ -404,5 +408,9 @@
     }
     .accordion-books ul:hover li:hover a * {
         transform: rotate(0deg);
+    }
+    .accordion-books ul li div a p {
+        margin-top: -1rem;
+        font-size: small;
     }
 }

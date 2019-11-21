@@ -4,6 +4,14 @@
     width: 100%;
 }
 
+.about-apocalypse-section .video-background-holder {
+    height: 100%;
+}
+
+.about-apocalypse-section video {
+    filter: grayscale(1);
+}
+
 .about-apocalypse-section .row {
     padding-top: 5rem;
     height: 100%;
@@ -33,4 +41,10 @@
 
 .about-apocalypse-section a {
     color: white;
+}
+
+@media only all and (max-width: 450px) {
+    .about-apocalypse-section h2 {
+        font-weight: bold;
+    }
 }

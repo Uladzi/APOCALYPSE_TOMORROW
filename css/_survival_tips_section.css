@@ -21,6 +21,10 @@
     width: 100%;
     font-family: monospace;
     font-size: 1.2rem;
+    background-image: url("../assets/media/white_wall.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .survival-tips-section .row {
@@ -43,6 +47,8 @@
     width: 100%;
     font-weight: bold;
     text-transform: uppercase;
+    border: 1px solid black;
+    background-color: transparent;
 }
 
 .survival-tips-section .col-12 .btn {
@@ -50,14 +56,23 @@
     width: auto;
 }
 
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem gray;
+}
+
 .survival-tips-section .card-body {
+    border: 1px solid black;
+    background-color: #ffffff87;
+    ;
     font-style: italic;
 }
 
 .anim-survival {
     position: absolute;
     font-size: 6rem;
-    margin-left: calc(50% - 162px);
+    margin-left: calc(50% - 150px);
     color: black;
     font-family: none;
     animation: anim-survival-tips 5s infinite alternate-reverse;

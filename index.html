@@ -8,7 +8,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Подключение Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Подключение CSS -->
     <link rel="stylesheet" href="css/main.css" type="text/css">
     <title>APOCALYPSE TOMORROW</title>
 </head>
@@ -55,15 +54,15 @@
     </nav>
     <!-- Cтартовая страница -->
     <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">
-                    <!-- Видео-фон на стартовой странице-->
-                    <div class="video-background-holder">
-                        <div class="video-background-overlay"></div>
-                        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+        <!-- Видео-фон на стартовой странице-->
+        <div class="video-background-holder">
+            <div class="video-background-overlay"></div>
+            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
                 <source src="assets/media/at_smoke_video.mp4" type="video/mp4">
             </video>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
                         <div class="video-background-content container h-100">
                             <div class="h-50 text-center">
                                 <div class="w-100 text-white pt-5">
@@ -94,25 +93,48 @@
     </header>
     <!-- Главный блок -->
     <main>
-        <article>
-            <!-- Секция О нас -->
-            <section class="about-us-section bg-light" id="about_us">
-                <div class=" container">
-                    <div class="row align-items-center">
-                        <div class="col text-center">
-                            <h2 class="display-4 mb-5 not-anim-font-about-us">What should you know about us</h2>
-                            <p class="lead not-anim-font-about-us-p1 text-left">We are a group of volunteers, who care about survival of the humanity and want you to know more about possible end of the world, because in modern circumstances it is becoming more our future than just fiction.</p>
-                            <p class="lead not-anim-font-about-us-p2 text-left">We created this web-site to accumulate all the necessary information on the issue, because disaster preparedness is more than worrying &mdash; it is also about being practical, preparing for realistic scenarios and being ready
-                                for the unpredictable.</p>
-                            <p class="lead not-anim-font-about-us-p3 mb-4 text-left">We are not asking for money, but you can make a <a href="#" class="text-danger font-weight-bold">donation</a> to development of this good cause. </p>
-                            <h2 class="display-5 font-weight-light py-5 not-anim-font-save-notsave">We will not save your souls, but we may save your bodies.</h2>
+        <!-- Секция О нас -->
+        <section class="about-us-section bg-light" id="about_us">
+            <div class=" container">
+                <div class="row align-items-center">
+                    <div class="col text-center">
+                        <h2 class="display-4 mb-5 not-anim-font-about-us">What should you know about us</h2>
+                        <p class="lead not-anim-font-about-us-p1 text-left">We are a group of volunteers, who care about survival of the humanity and want you to know more about possible end of the world, because in modern circumstances it is becoming more our future than just fiction.</p>
+                        <p class="lead not-anim-font-about-us-p2 text-left">We created this web-site to accumulate all the necessary information on the issue, because disaster preparedness is more than worrying &mdash; it is also about being practical, preparing for realistic scenarios and being ready
+                            for the unpredictable.</p>
+                        <p class="lead not-anim-font-about-us-p3 mb-4 text-left">We are not asking for money, but you can make a <a href="#" class="text-danger font-weight-bold" data-toggle="modal" data-target="#exampleModal"><u>donation</u></a> to development of this good cause. </p>
+                        <!-- Модальное окно с благодарностью -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-danger" id="exampleModalLabel">YOUR DONATION IS ACCEPTED</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                    </div>
+                                    <div class="modal-body font-weight-bold">
+                                        THANK YOU!
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <h2 class="display-5 font-weight-light py-5 not-anim-font-save-notsave">We will not save your souls, but we may save your bodies.</h2>
                     </div>
                 </div>
-            </section>
-            <!-- Секция Об апокалипсисе -->
-            <section class="about-apocalypse-section bg-dark" id="about_apocalypse">
-                <div class="container">
+            </div>
+        </section>
+        <!-- Секция Об апокалипсисе -->
+        <section class="about-apocalypse-section bg-dark" id="about_apocalypse">
+            <div class="video-background-holder">
+                <div class="video-background-overlay"></div>
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                            <source src="assets/media/zombie_woman.mp4" type="video/mp4">
+                        </video>
+                <div class="container video-background-content container">
                     <div class="row text-center">
                         <!-- Первая колонка -->
                         <div class="col-sm-5 text-light text-left border-right">
@@ -280,760 +302,791 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Секция О советах по выживанию -->
-            <section class="survival-tips-section bg-light" id="survival_tips">
-                <div class="container">
-                    <!-- Анимационный текст -->
-                    <div class="row anim-survival-tips-row mb-5">
-                        <div class="col">
-                            <div class="anim-survival-tips d-none d-md-block d-lg-block d-xl-block">
-                                <h2 class="anim-survival">STAY</h2>
-                                <h2 class=" anim-tips">ALIVE</h2>
-                            </div>
+            </div>
+        </section>
+        <!-- Секция О советах по выживанию -->
+        <section class="survival-tips-section bg-light" id="survival_tips">
+            <div class="container">
+                <!-- Анимационный текст -->
+                <div class="row anim-survival-tips-row mb-5">
+                    <div class="col">
+                        <div class="anim-survival-tips d-none d-md-block d-lg-block d-xl-block">
+                            <h2 class="anim-survival">STAY</h2>
+                            <h2 class=" anim-tips">ALIVE</h2>
                         </div>
                     </div>
-                    <!-- 14 кнопок с советами -->
-                    <!-- Главная кнопка -->
-                    <div class="row text-justify not-anim-btns-survival-tips pb-3">
-                        <div class="col-12 pb-4 py-4 text-center">
-                            <button class="btn btn-dark text-light" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseBtn1 multiCollapseBtn2 multiCollapseBtn3 multiCollapseBtn4 multiCollapseBtn5
+                </div>
+                <!-- 14 кнопок с советами -->
+                <!-- Главная кнопка -->
+                <div class="row text-justify not-anim-btns-survival-tips pb-3">
+                    <div class="col-12 pb-4 py-4 text-center">
+                        <button class="btn" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseBtn1 multiCollapseBtn2 multiCollapseBtn3 multiCollapseBtn4 multiCollapseBtn5
                                     multiCollapseBtn6 multiCollapseBtn7 multiCollapseBtn8 multiCollapseBtn9 multiCollapseBtn10 multiCollapseBtn11 multiCollapseBtn12 multiCollapseBtn13 multiCollapseBtn14"><span>Fourteen</span> SURVIVAL TIPS</button>
-                        </div>
-                        <!-- Совет 1 -->
-                        <div class="col-md-6 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn1" aria-expanded="false" aria-controls="multiCollapseBtn1"><span>1</span> Gather sufficient supplies to survive for 90 days</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn1">
-                                <div class="card card-body">
-                                    <p>Hopefully having three months of supplies will get you settled and going with your new self-sufficient habits.</p>
-                                </div>
+                    </div>
+                    <!-- Совет 1 -->
+                    <div class="col-md-6 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn1" aria-expanded="false" aria-controls="multiCollapseBtn1"><span>1</span> Gather sufficient supplies to survive for 90 days</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn1">
+                            <div class="card card-body">
+                                <p>Hopefully having three months of supplies will get you settled and going with your new self-sufficient habits.</p>
                             </div>
                         </div>
-                        <!-- Совет 2 -->
-                        <div class="col-md-6 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn2" aria-expanded="false" aria-controls="multiCollapseBtn2"><span>2</span> Keep yourself healthy against everything</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn2">
-                                <div class="card card-body">
-                                    <p> You'll be dealing with everything from cuts to dysentery. Hospitals will cease to function and exist so simple problems will seem a lot more daunting. If you or a family member has a specific ailment, stockpile medications
-                                        for that, too</p>
-                                </div>
+                    </div>
+                    <!-- Совет 2 -->
+                    <div class="col-md-6 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn2" aria-expanded="false" aria-controls="multiCollapseBtn2"><span>2</span> Keep yourself healthy against everything</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn2">
+                            <div class="card card-body">
+                                <p> You'll be dealing with everything from cuts to dysentery. Hospitals will cease to function and exist so simple problems will seem a lot more daunting. If you or a family member has a specific ailment, stockpile medications
+                                    for that, too</p>
                             </div>
                         </div>
-                        <!-- Совет 3 -->
-                        <div class="col-md-4 pb-2 ">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn4" aria-expanded="false" aria-controls="multiCollapseBtn4"><span>3</span> Prepare an emergency kit</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn4">
-                                <div class="card card-body">
-                                    <p>Whether you're on the lookout for cannibals, flesh-eating super-bacteria, zombies or a meteor, you'll need to think about your health. Here's a list for what you need to put in your emergency kit:</p>
-                                    <ul>
-                                        <li>adhesive bandages, such as Band-Aids</li>
-                                        <li>gauze</li>
-                                        <li>medical tape</li>
-                                        <li>antibiotics</li>
-                                        <li>antiviral drugs</li>
-                                        <li>ibuprofen (non-steroidal anti-inflammatory drug (NSAID))</li>
-                                        <li>acetaminophen/paracetamol (over-the-counter pain relief)</li>
-                                        <li>antihistamine</li>
-                                        <li>aspirin (over-the-counter pain relief)</li>
-                                        <li>laxative</li>
-                                        <li>iodine</li>
-                                        <li>potassium Iodine</li>
-                                        <li>hand sanitizing liquid</li>
-                                        <li>candles</li>
-                                        <li>a multi-use tool (aka a &quot;hobo tool&quot;)</li>
-                                        <li>phone charger (preferably solar)</li>
-                                        <li>wood for burning</li>
-                                        <li>towels</li>
-                                        <li>life jackets, if your area is prone to flooding</li>
-                                        <li>extra warm clothes</li>
-                                        <li>paper towels</li>
-                                        <li>solar chargers</li>
-                                        <li>pet food (enough for 30-90 days)</li>
-                                        <li>tweezers</li>
-                                        <li>plasters</li>
-                                        <li>safety pins</li>
-                                        <li>thermometer</li>
-                                        <li>superglue</li>
-                                        <li>superglue</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <!-- Совет 3 -->
+                    <div class="col-md-4 pb-2 ">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn4" aria-expanded="false" aria-controls="multiCollapseBtn4"><span>3</span> Prepare an emergency kit</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn4">
+                            <div class="card card-body">
+                                <p>Whether you're on the lookout for cannibals, flesh-eating super-bacteria, zombies or a meteor, you'll need to think about your health. Here's a list for what you need to put in your emergency kit:</p>
+                                <ul>
+                                    <li>adhesive bandages, such as Band-Aids</li>
+                                    <li>gauze</li>
+                                    <li>medical tape</li>
+                                    <li>antibiotics</li>
+                                    <li>antiviral drugs</li>
+                                    <li>ibuprofen (non-steroidal anti-inflammatory drug (NSAID))</li>
+                                    <li>acetaminophen/paracetamol (over-the-counter pain relief)</li>
+                                    <li>antihistamine</li>
+                                    <li>aspirin (over-the-counter pain relief)</li>
+                                    <li>laxative</li>
+                                    <li>iodine</li>
+                                    <li>potassium Iodine</li>
+                                    <li>hand sanitizing liquid</li>
+                                    <li>candles</li>
+                                    <li>a multi-use tool (aka a &quot;hobo tool&quot;)</li>
+                                    <li>phone charger (preferably solar)</li>
+                                    <li>wood for burning</li>
+                                    <li>towels</li>
+                                    <li>life jackets, if your area is prone to flooding</li>
+                                    <li>extra warm clothes</li>
+                                    <li>paper towels</li>
+                                    <li>solar chargers</li>
+                                    <li>pet food (enough for 30-90 days)</li>
+                                    <li>tweezers</li>
+                                    <li>plasters</li>
+                                    <li>safety pins</li>
+                                    <li>thermometer</li>
+                                    <li>superglue</li>
+                                    <li>superglue</li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- Совет 4 -->
-                        <div class="col-md-4 pb-2 ">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn5" aria-expanded="false" aria-controls="multiCollapseBtn5"><span>4</span> Become a good shot</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn5">
-                                <div class="card card-body">
-                                    <p>Depending on the circumstances surrounding the apocalypse, knowing how to handle a gun can mean the difference between life and death, particularly if you'll need to hunt or defend your home against violence.</p>
-                                    <p>If it's legal to do so where you live, it might be a good idea to purchase a gun ahead of time and become proficient at using it. Be sure to exercise gun safety at all times. For starters, always keep the muzzle pointed
-                                        in a safe direction, unload the gun when not in use, always treat a gun as though it is loaded (even when you know it isn't), keep the gun where children cannot access it, be sure of your target and what lies beyond
-                                        it, and regularly have the gun serviced by a firearms professional.</p>
-                                    <p>Regardless of who or what you'll be facing, this is probably a good idea. Anything menacing needs to be kept far, far away. Whatever or whoever your enemy, shooting them will probably increase your chances of not being
-                                        attacked or eaten.</p>
-                                    <p>Unless the apocalypse is due to some bacteria that's floating around in the air. In that case, get a gas mask. The people/zombies/menacing forces will probably still see you as an enemy.</p>
-                                </div>
+                    </div>
+                    <!-- Совет 4 -->
+                    <div class="col-md-4 pb-2 ">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn5" aria-expanded="false" aria-controls="multiCollapseBtn5"><span>4</span> Become a good shot</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn5">
+                            <div class="card card-body">
+                                <p>Depending on the circumstances surrounding the apocalypse, knowing how to handle a gun can mean the difference between life and death, particularly if you'll need to hunt or defend your home against violence.</p>
+                                <p>If it's legal to do so where you live, it might be a good idea to purchase a gun ahead of time and become proficient at using it. Be sure to exercise gun safety at all times. For starters, always keep the muzzle pointed
+                                    in a safe direction, unload the gun when not in use, always treat a gun as though it is loaded (even when you know it isn't), keep the gun where children cannot access it, be sure of your target and what lies beyond
+                                    it, and regularly have the gun serviced by a firearms professional.</p>
+                                <p>Regardless of who or what you'll be facing, this is probably a good idea. Anything menacing needs to be kept far, far away. Whatever or whoever your enemy, shooting them will probably increase your chances of not being
+                                    attacked or eaten.</p>
+                                <p>Unless the apocalypse is due to some bacteria that's floating around in the air. In that case, get a gas mask. The people/zombies/menacing forces will probably still see you as an enemy.</p>
                             </div>
                         </div>
-                        <!-- Совет 5 -->
-                        <div class="col-md-4 pb-2">
-                            <button class="btn btn-dark " type="button" data-toggle="collapse" data-target="#multiCollapseBtn8" aria-expanded="false" aria-controls="multiCollapseBtn8"><span>5</span> Use diesel-powered vehicles</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn8">
-                                <div class="card card-body">
-                                    <p>That's a nice way of saying, "Everybody poops. " To keep hygiene from being an issue on top of everything else, pack the following:</p>
-                                    <p>Hoarding gasoline won't work; the chemicals that once kept it fresh will degrade it in time. After a year or so, it goes bad. Chances are gas stations will run out of gasoline but there could be some diesel left. In
-                                        addition, all military diesels can run on other fuels as well, from rotten kerosene to fermented leaves. So invest in something that can handle the harder fuels.</p>
-                                    <p>In said vehicle, it's equally as likely that you'll be in it when all breaks loose, so pack a survival kit to keep in your car as well.</p>
-                                    <p>If this isn't an option, make sure you have a bicycle laying around somewhere that's fully functioning. There will be a point when you need to cover large distances in a short amount of time.</p>
-                                </div>
+                    </div>
+                    <!-- Совет 5 -->
+                    <div class="col-md-4 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn8" aria-expanded="false" aria-controls="multiCollapseBtn8"><span>5</span> Use diesel-powered vehicles</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn8">
+                            <div class="card card-body">
+                                <p>That's a nice way of saying, "Everybody poops. " To keep hygiene from being an issue on top of everything else, pack the following:</p>
+                                <p>Hoarding gasoline won't work; the chemicals that once kept it fresh will degrade it in time. After a year or so, it goes bad. Chances are gas stations will run out of gasoline but there could be some diesel left. In addition,
+                                    all military diesels can run on other fuels as well, from rotten kerosene to fermented leaves. So invest in something that can handle the harder fuels.</p>
+                                <p>In said vehicle, it's equally as likely that you'll be in it when all breaks loose, so pack a survival kit to keep in your car as well.</p>
+                                <p>If this isn't an option, make sure you have a bicycle laying around somewhere that's fully functioning. There will be a point when you need to cover large distances in a short amount of time.</p>
                             </div>
                         </div>
-                        <!-- Совет 6 -->
-                        <div class="col-md-4 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn7" aria-expanded="false" aria-controls="multiCollapseBtn7"><span>6</span> Set up a communication system</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn7">
-                                <div class="card card-body">
-                                    <p>Everyone in the household and close family and friends should have a communication system to communicate with family and friends. Communicate secret locations with your family members and friends using a radio.</p>
-                                    <p>Keep batteries with your radio. The last thing you want is to presume you're prepared when you're really not. And if you have a loved one you're taking care of, make sure they have a radio and you're not keeping both
-                                        of them for the two of you.</p>
-                                    <p>When all else fails, work out how you will contact each other. This is when your permanent markers will come in handy. If the apocalypse strikes and you have left the house, write down where you are going, when you
-                                        left, and if/when you'll be back on the wall, on a rock, on a nearby car, wherever you can find.</p>
-                                </div>
+                    </div>
+                    <!-- Совет 6 -->
+                    <div class="col-md-4 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn7" aria-expanded="false" aria-controls="multiCollapseBtn7"><span>6</span> Set up a communication system</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn7">
+                            <div class="card card-body">
+                                <p>Everyone in the household and close family and friends should have a communication system to communicate with family and friends. Communicate secret locations with your family members and friends using a radio.</p>
+                                <p>Keep batteries with your radio. The last thing you want is to presume you're prepared when you're really not. And if you have a loved one you're taking care of, make sure they have a radio and you're not keeping both of
+                                    them for the two of you.</p>
+                                <p>When all else fails, work out how you will contact each other. This is when your permanent markers will come in handy. If the apocalypse strikes and you have left the house, write down where you are going, when you left,
+                                    and if/when you'll be back on the wall, on a rock, on a nearby car, wherever you can find.</p>
                             </div>
                         </div>
-                        <!-- Совет 7-->
-                        <div class="col-md-4 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn3" aria-expanded="false" aria-controls="multiCollapseBtn3"><span>7</span> Store supplies for just getting by</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn3">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>batteries</li>
-                                        <li>flashlights</li>
-                                        <li>matches</li>
-                                        <li>pots and pans (for cooking or boiling water)</li>
-                                        <li>plastic utensils (plate, mug, spoon, fork)</li>
-                                        <li>rope or twine</li>
-                                        <li>map</li>
-                                        <li>permanent markers (something to write with)</li>
-                                        <li>change of clothes</li>
-                                        <li>can opener</li>
-                                        <li>lighters</li>
-                                        <li>camp stove and propane</li>
-                                        <li>hatchet or axe</li>
-                                        <li>first aid book</li>
-                                        <li>sunglasses</li>
-                                        <li>duct tape</li>
-                                        <li>glow sticks</li>
-                                        <li>boots</li>
-                                        <li>extra pants</li>
-                                        <li>smartphone</li>
-                                        <li>water filters</li>
-                                        <li>other comfort items</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <!-- Совет 7-->
+                    <div class="col-md-4 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn3" aria-expanded="false" aria-controls="multiCollapseBtn3"><span>7</span> Store supplies for just getting by</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn3">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>batteries</li>
+                                    <li>flashlights</li>
+                                    <li>matches</li>
+                                    <li>pots and pans (for cooking or boiling water)</li>
+                                    <li>plastic utensils (plate, mug, spoon, fork)</li>
+                                    <li>rope or twine</li>
+                                    <li>map</li>
+                                    <li>permanent markers (something to write with)</li>
+                                    <li>change of clothes</li>
+                                    <li>can opener</li>
+                                    <li>lighters</li>
+                                    <li>camp stove and propane</li>
+                                    <li>hatchet or axe</li>
+                                    <li>first aid book</li>
+                                    <li>sunglasses</li>
+                                    <li>duct tape</li>
+                                    <li>glow sticks</li>
+                                    <li>boots</li>
+                                    <li>extra pants</li>
+                                    <li>smartphone</li>
+                                    <li>water filters</li>
+                                    <li>other comfort items</li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- Совет 8 -->
-                        <div class="col-md-4 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn9" aria-expanded="false" aria-controls="multiCollapseBtn9"><span>8</span> Find a way to generate your own electricity</button>
-                            <div class="collapse multi-collapse " id="multiCollapseBtn9">
-                                <div class="card card-body">
-                                    <p>Taking car batteries and daisy chaining them will act as an energy storage device, but you're going to need to generate power. A generator running on wood, gas or a diesel engine where you can make your own fuel is
-                                        good, but the real payoff is using renewable energy by making your own wind turbine out of PVC pipes and a car alternator or scavenging some solar panels near a highway. Having electricity in your safe house will
-                                        keep the lights on and keep electronics running. Electricity is important to run power tools, welders, water/fuel pumps, radio equipment as well as charge any portable item or comfort item you may wish to use. It'll
-                                        be a surprising source of morale, too. </p>
-                                </div>
+                    </div>
+                    <!-- Совет 8 -->
+                    <div class="col-md-4 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn9" aria-expanded="false" aria-controls="multiCollapseBtn9"><span>8</span> Find a way to generate your own electricity</button>
+                        <div class="collapse multi-collapse " id="multiCollapseBtn9">
+                            <div class="card card-body">
+                                <p>Taking car batteries and daisy chaining them will act as an energy storage device, but you're going to need to generate power. A generator running on wood, gas or a diesel engine where you can make your own fuel is good,
+                                    but the real payoff is using renewable energy by making your own wind turbine out of PVC pipes and a car alternator or scavenging some solar panels near a highway. Having electricity in your safe house will keep the
+                                    lights on and keep electronics running. Electricity is important to run power tools, welders, water/fuel pumps, radio equipment as well as charge any portable item or comfort item you may wish to use. It'll be a surprising
+                                    source of morale, too. </p>
                             </div>
                         </div>
-                        <!-- Совет 9 -->
-                        <div class="col-md-4 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn6" aria-expanded="false" aria-controls="multiCollapseBtn6"><span>9</span> Plan how to prepare for the messier sides of the long-term</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn6">
-                                <div class="card card-body">
-                                    <p>That's a nice way of saying, &quot;Everybody poops.&quot; To keep hygiene from being an issue on top of everything else, pack the following:</p>
-                                    <ul>
-                                        <li>toilet paper (a couple rolls will suffice)</li>
-                                        <li>menstrual products</li>
-                                        <li>toothbrush and toothpaste</li>
-                                        <li>plastic garbage bags and ties</li>
-                                        <li>shovel or trowel</li>
-                                        <li>bleach</li>
-                                        <li>soap and shampoo</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <!-- Совет 9 -->
+                    <div class="col-md-4 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn6" aria-expanded="false" aria-controls="multiCollapseBtn6"><span>9</span> Plan how to prepare for the messier sides of the long-term</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn6">
+                            <div class="card card-body">
+                                <p>That's a nice way of saying, &quot;Everybody poops.&quot; To keep hygiene from being an issue on top of everything else, pack the following:</p>
+                                <ul>
+                                    <li>toilet paper (a couple rolls will suffice)</li>
+                                    <li>menstrual products</li>
+                                    <li>toothbrush and toothpaste</li>
+                                    <li>plastic garbage bags and ties</li>
+                                    <li>shovel or trowel</li>
+                                    <li>bleach</li>
+                                    <li>soap and shampoo</li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- Совет 10 -->
-                        <div class="col-md-4 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn10" aria-expanded="false" aria-controls="multiCollapseBtn10"><span>10</span> Learn how to hunt</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn10">
-                                <div class="card card-body">
-                                    <p>Master the art of the snare trap. If you're really scrappy with it, you need nothing but what nature provides you.</p>
-                                    <p>If you're on the ocean or near a body of water, get to fishing or fly fishing.</p>
-                                    <p>Start honing your archery skills. Once you've got a reason, learn how to make your own bow.</p>
-                                </div>
+                    </div>
+                    <!-- Совет 10 -->
+                    <div class="col-md-4 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn10" aria-expanded="false" aria-controls="multiCollapseBtn10"><span>10</span> Learn how to hunt</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn10">
+                            <div class="card card-body">
+                                <p>Master the art of the snare trap. If you're really scrappy with it, you need nothing but what nature provides you.</p>
+                                <p>If you're on the ocean or near a body of water, get to fishing or fly fishing.</p>
+                                <p>Start honing your archery skills. Once you've got a reason, learn how to make your own bow.</p>
                             </div>
                         </div>
-                        <!-- Совет 11 -->
-                        <div class="col-md-4 pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn11" aria-expanded="false" aria-controls="multiCollapseBtn11"><span>11</span> Obtain and stockpile basic survival items</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn11">
-                                <div class="card card-body">
-                                    <ul>
-                                        <li>jugs of water</li>
-                                        <li>canned goods</li>
-                                        <li>vacuum-sealed goods</li>
-                                        <li>blankets and pillows</li>
-                                        <li>medications</li>
-                                        <li>a weapon that you actually know how to use properly</li>
-                                        <li>a knife (in addition to a weapon)</li>
-                                        <li>warm, long sleeved clothing</li>
-                                        <li>carrying bag (for moving and/or fleeing)</li>
-                                    </ul>
-                                </div>
+                    </div>
+                    <!-- Совет 11 -->
+                    <div class="col-md-4 pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn11" aria-expanded="false" aria-controls="multiCollapseBtn11"><span>11</span> Obtain and stockpile basic survival items</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn11">
+                            <div class="card card-body">
+                                <ul>
+                                    <li>jugs of water</li>
+                                    <li>canned goods</li>
+                                    <li>vacuum-sealed goods</li>
+                                    <li>blankets and pillows</li>
+                                    <li>medications</li>
+                                    <li>a weapon that you actually know how to use properly</li>
+                                    <li>a knife (in addition to a weapon)</li>
+                                    <li>warm, long sleeved clothing</li>
+                                    <li>carrying bag (for moving and/or fleeing)</li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- Совет 12 -->
-                        <div class="col-md pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn12" aria-expanded="false" aria-controls="multiCollapseBtn12"><span>12</span> Read up on disaster preparedness</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn12">
-                                <div class="card card-body">
-                                    <p>Read as many non-fiction books about disaster preparation and survival essentials as you can. </p>
-                                </div>
+                    </div>
+                    <!-- Совет 12 -->
+                    <div class="col-md pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn12" aria-expanded="false" aria-controls="multiCollapseBtn12"><span>12</span> Read up on disaster preparedness</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn12">
+                            <div class="card card-body">
+                                <p>Read as many non-fiction books about disaster preparation and survival essentials as you can. </p>
                             </div>
                         </div>
-                        <!-- Совет 13-->
-                        <div class="col-md pb-2">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn13" aria-expanded="false" aria-controls="multiCollapseBtn13"><span>13</span> Become less dependent</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn13">
-                                <div class="card card-body">
-                                    <p>If we're all honest with ourselves, what kind of world could we recreate without others?</p>
-                                </div>
+                    </div>
+                    <!-- Совет 13-->
+                    <div class="col-md pb-2">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn13" aria-expanded="false" aria-controls="multiCollapseBtn13"><span>13</span> Become less dependent</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn13">
+                            <div class="card card-body">
+                                <p>If we're all honest with ourselves, what kind of world could we recreate without others?</p>
                             </div>
                         </div>
-                        <!-- Совет 14 -->
-                        <div class="col-md">
-                            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#multiCollapseBtn14" aria-expanded="false" aria-controls="multiCollapseBtn14"><span>14</span> Pray</button>
-                            <div class="collapse multi-collapse" id="multiCollapseBtn14">
-                                <div class="card card-body">
-                                    <p>Over time, new society will form. The collapse of a single city usually summons the National Guard, meaning that you will be relocated to a different society eventually. The collapse of a country means that you can
-                                        now start your own country.</p>
-                                </div>
+                    </div>
+                    <!-- Совет 14 -->
+                    <div class="col-md">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#multiCollapseBtn14" aria-expanded="false" aria-controls="multiCollapseBtn14"><span>14</span> Pray</button>
+                        <div class="collapse multi-collapse" id="multiCollapseBtn14">
+                            <div class="card card-body">
+                                <p>Over time, new society will form. The collapse of a single city usually summons the National Guard, meaning that you will be relocated to a different society eventually. The collapse of a country means that you can now
+                                    start your own country.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Секция Доп инфо -->
-            <section class="extra-info-section bg-dark" id="extra_info">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-light">
-                            <h2 class="display-4 text-center">Extra information library</h2>
-                            <h3 class="text-center mt-5">Films</h3>
-                            <!-- Аккордеон - Фильмы -->
-                            <div class="accordion accordion-films">
-                                <ul>
-                                    <li tabindex="1">
-                                        <div>
-                                            <a href="https://clck.ru/K46G2" title="The Wandering Earth" target="_blank">
-                                                <h2>The Wandering Earth</h2>
-                                                <p>2019</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="2">
-                                        <div>
-                                            <a href="https://clck.ru/K47DC" title="Bird Box" target="_blank">
-                                                <h2>Bird Box</h2>
-                                                <p>2018</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="3">
-                                        <div>
-                                            <a href="https://clck.ru/K5H6W" title="Cargro" target="_blank">
-                                                <h2>Cargo</h2>
-                                                <p>2017</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="4">
-                                        <div>
-                                            <a href="https://clck.ru/K474b" title="10 Cloverfield Lane" target="_blank">
-                                                <h2> 10 Cloverfield Lane</h2>
-                                                <p>2018</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="5">
-                                        <div>
-                                            <a href="https://clck.ru/K5J7L" title="These Final Hours" target="_blank">
-                                                <h2>These Final Hours</h2>
-                                                <p>2015</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="6">
-                                        <div>
-                                            <a href="https://clck.ru/K5JCh" title="Turbo Kid" target="_blank">
-                                                <h2>Turbo Kid</h2>
-                                                <p>2015</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="7">
-                                        <div>
-                                            <a href="https://clck.ru/K5JKA" title="Dawn of the Planet of the Apes" target="_blank">
-                                                <h2>Dawn of the Planet of the Apes</h2>
-                                                <p>2014</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="8">
-                                        <div>
-                                            <a href="https://clck.ru/K5JZr" title="This Is the End" target="_blank">
-                                                <h2>This Is the End</h2>
-                                                <p>2013</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="9">
-                                        <div>
-                                            <a href="https://clck.ru/K5Jxm" title="Snowpiercer" target="_blank">
-                                                <h2>Snowpiercer</h2>
-                                                <p>2013</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="10">
-                                        <div>
-                                            <a href="https://clck.ru/K5KJJ" title="Seeking a Friend for the End of the World" target="_blank">
-                                                <h2>Seeking a Friend for the End of the World</h2>
-                                                <p>2012</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="11">
-                                        <div>
-                                            <a href="https://clck.ru/K5Kd7" title="Melancholia" target="_blank">
-                                                <h2>Melancholia</h2>
-                                                <p>2011</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="12">
-                                        <div>
-                                            <a href="https://clck.ru/K5KpL" title="Take Shelte" target="_blank">
-                                                <h2>Take Shelte</h2>
-                                                <p>2011</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="13">
-                                        <div>
-                                            <a href="https://clck.ru/K5LF6" title="The Divide" target="_blank">
-                                                <h2>The Divide</h2>
-                                                <p>2011</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="14">
-                                        <div>
-                                            <a href="https://clck.ru/K5LH8" title="The Day" target="_blank">
-                                                <h2>The Day</h2>
-                                                <p>2011</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="15">
-                                        <div>
-                                            <a href="https://clck.ru/K5LJj" title="Legion" target="_blank">
-                                                <h2>Legion</h2>
-                                                <p>2010</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="16">
-                                        <div>
-                                            <a href="https://clck.ru/K5LKY" title="Stake Land" target="_blank">
-                                                <h2>Stake Land</h2>
-                                                <p>2010</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="17">
-                                        <div>
-                                            <a href="https://clck.ru/K5LLm" title="The Road" target="_blank">
-                                                <h2>The Road</h2>
-                                                <p>2009</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="18">
-                                        <div>
-                                            <a href="https://clck.ru/K5LMa" title="Zombieland" target="_blank">
-                                                <h2>Zombieland</h2>
-                                                <p>2009</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="19">
-                                        <div>
-                                            <a href="https://clck.ru/K5LNB" title="Carriers" target="_blank">
-                                                <h2>Carriers</h2>
-                                                <p>2009</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="20">
-                                        <div>
-                                            <a href="https://clck.ru/K5LNZ" title="Wall-E" target="_blank">
-                                                <h2>Wall-E</h2>
-                                                <p>2008</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="21">
-                                        <div>
-                                            <a href="https://clck.ru/K5LPA" title="Sunshine" target="_blank">
-                                                <h2>Sunshine</h2>
-                                                <p>2007</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="22" title="I am Legend" target="_blank">
-                                        <div>
-                                            <a href="https://clck.ru/K5LPW">
-                                                <h2>I am Legend</h2>
-                                                <p>2007</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="23">
-                                        <div>
-                                            <a href="https://clck.ru/K5LQ7" title="The Day After Tomorrow" target="_blank">
-                                                <h2>The Day After Tomorrow</h2>
-                                                <p>2004</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="24">
-                                        <div>
-                                            <a href="https://clck.ru/K5LQj" title="28 Days Later" target="_blank">
-                                                <h2>28 Days Later</h2>
-                                                <p>2002</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="text-center mt-5">Series</h3>
-                            <!-- Аккордеон - Сериалы -->
-                            <div class="accordion accordion-films accordion-series">
-                                <ul>
-                                    <li tabindex="1">
-                                        <div>
-                                            <a href="https://clck.ru/K46G2" title="Daybreak" target="_blank">
-                                                <h2>Daybreak</h2>
-                                                <p>2019</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="2">
-                                        <div>
-                                            <a href="https://clck.ru/K5Nbr" title="Black Summer" target="_blank">
-                                                <h2>Black Summer</h2>
-                                                <p>2019</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="3">
-                                        <div>
-                                            <a href="https://clck.ru/JKEoB" title="Lost in Space" target="_blank">
-                                                <h2>Lost in Space</h2>
-                                                <p>2018</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="4">
-                                        <div>
-                                            <a href="https://clck.ru/K5Ncj" title="The Rain" target="_blank">
-                                                <h2>The Rain</h2>
-                                                <p>2018</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="5">
-                                        <div>
-                                            <a href="https://clck.ru/K5Ncy" title="The Handmaid’s Tale" target="_blank">
-                                                <h2>The Handmaid’s Tale</h2>
-                                                <p>2017</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="6">
-                                        <div>
-                                            <a href="https://clck.ru/K5NdS" title="Colony" target="_blank">
-                                                <h2>Colony</h2>
-                                                <p>2016</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="7">
-                                        <div>
-                                            <a href="https://clck.ru/K5Nde" title="Van Helsing" target="_blank">
-                                                <h2>Van Helsing</h2>
-                                                <p>2016</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="8">
-                                        <div>
-                                            <a href="https://clck.ru/" title="The Shannara Chronicles" target="_blank">
-                                                <h2> The Shannara Chronicles</h2>
-                                                <p>2016</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="9">
-                                        <div>
-                                            <a href="https://clck.ru/" title="3&#37;" target="_blank">
-                                                <h2> 3&#37;</h2>
-                                                <p>2016</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="10">
-                                        <div>
-                                            <a href="https://clck.ru/K5NeF" title="Z Nation" target="_blank">
-                                                <h2>Z Nation</h2>
-                                                <p>2015</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="11">
-                                        <div>
-                                            <a href="https://clck.ru/K5NeT" title="Into the Badlands" target="_blank">
-                                                <h2>Into the Badlands</h2>
-                                                <p>2015</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="12">
-                                        <div>
-                                            <a href="https://clck.ru/K5Nfv" title="Mr.Robot" target="_blank">
-                                                <h2>Mr.Robot</h2>
-                                                <p>2015</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="13">
-                                        <div>
-                                            <a href="https://clck.ru/K5Ngj" title="The Last Man on Earth" target="_blank">
-                                                <h2>The Last Man on Earth</h2>
-                                                <p>2015</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="14">
-                                        <div>
-                                            <a href="https://clck.ru/K5NhW" title="Zoo" target="_blank">
-                                                <h2>Zoo</h2>
-                                                <p>2015</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="15">
-                                        <div>
-                                            <a href="https://clck.ru/JKEoy" title="The 100" target="_blank">
-                                                <h2>The 100</h2>
-                                                <p>2014</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="16">
-                                        <div>
-                                            <a href="https://clck.ru/K5Ni3" title="Attack on Titan" target="_blank">
-                                                <h2>Attack on Titan</h2>
-                                                <p>2013</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="17">
-                                        <div>
-                                            <a href="https://clck.ru/K5NiM" title="Black mirror" target="_blank">
-                                                <h2>Black mirror</h2>
-                                                <p>2011</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="18">
-                                        <div>
-                                            <a href="https://clck.ru/K5Nid" title="The Walking Dead" target="_blank">
-                                                <h2>The Walking Dead</h2>
-                                                <p>2010</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="19">
-                                        <div>
-                                            <a href="https://clck.ru/K5Nio" title="Jericho" target="_blank">
-                                                <h2>Jericho</h2>
-                                                <p>2008</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <h3 class="text-center mt-5">Books</h3>
-                            <!-- Аккордеон - Книги -->
-                            <div class="accordion accordion-films accordion-books">
-                                <ul>
-                                    <li tabindex="2">
-                                        <div>
-                                            <a href="#сontacts" title="The Road">
-                                                <h2>The Road</h2>
-                                                <p>by Cormac McCarthy</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="3">
-                                        <div>
-                                            <a href="#сontacts" title="The Stand">
-                                                <h2>The Stand</h2>
-                                                <p>by Stephen King</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="4">
-                                        <div>
-                                            <a href="#сontacts" title="Hollow Kingdom">
-                                                <h2>Hollow Kingdom</h2>
-                                                <p>by Kira Jane Buxton</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="1">
-                                        <div>
-                                            <a href="#сontacts" title="A Boy and His Dog at the End of the World">
-                                                <h2>A Boy and His Dog at the End of the World</h2>
-                                                <p>by C.A. Fletcher</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="5">
-                                        <div>
-                                            <a href="#сontacts" title="World War Z">
-                                                <h2>World War Z</h2>
-                                                <p>by Max Brooks</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="6">
-                                        <div>
-                                            <a href="#сontacts" title="Earth Abides">
-                                                <h2>Earth Abides</h2>
-                                                <p>by George R Stewart</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="7">
-                                        <div>
-                                            <a href="#сontacts" title="Oryx and Crake">
-                                                <h2>Oryx and Crake</h2>
-                                                <p>by Margaret Atwood</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="8">
-                                        <div>
-                                            <a href="#сontacts" title="I Am Legend">
-                                                <h2>I Am Legend</h2>
-                                                <p>by Richard Matheson</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="9">
-                                        <div>
-                                            <a href="#сontacts" title="One Second After">
-                                                <h2>One Second After</h2>
-                                                <p>by William R Forstchen</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="10">
-                                        <div>
-                                            <a href="#сontacts" title="A Canticle for Leibowitz">
-                                                <h2>A Canticle for Leibowitz</h2>
-                                                <p>by Walter M. Miller, Jr.</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="11">
-                                        <div>
-                                            <a href="#сontacts" title="The Passage">
-                                                <h2>The Passage</h2>
-                                                <p>by Justin Cronin</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="12">
-                                        <div>
-                                            <a href="#сontacts" title="Alas, Babylon">
-                                                <h2>Alas, Babylon</h2>
-                                                <p>by Pat Frank</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="13">
-                                        <div>
-                                            <a href="#сontacts" title="The Day of the Triffids">
-                                                <h2>The Day of the Triffids</h2>
-                                                <p>by John Wyndham</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="14">
-                                        <div>
-                                            <a href="#сontacts" title="Swan Song">
-                                                <h2>Swan Song</h2>
-                                                <p>by Robert McCammon</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                                    <li tabindex="15">
-                                        <div>
-                                            <a href="#сontacts" title="The Book of M: A Novel">
-                                                <h2>The Book of M: A Novel</h2>
-                                                <p>by Peng Shepherd</p>
-                                            </a>
-                                        </div>
-                                    </li>
-                            </div>
+            </div>
+        </section>
+        <!-- Секция Доп инфо -->
+        <section class="extra-info-section bg-dark" id="extra_info">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-light">
+                        <h2 class="extra-text-class display-4 text-center">Extra information library</h2>
+                        <h3 class="text-center mt-5">Films</h3>
+                        <!-- Аккордеон - Фильмы -->
+                        <div class="accordion accordion-films">
+                            <ul>
+                                <li tabindex="1">
+                                    <div>
+                                        <a href="https://clck.ru/K46G2" title="The Wandering Earth" target="_blank">
+                                            <h2>The Wandering Earth</h2>
+                                            <p>2019</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="2">
+                                    <div>
+                                        <a href="https://clck.ru/K47DC" title="Bird Box" target="_blank">
+                                            <h2>Bird Box</h2>
+                                            <p>2018</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="3">
+                                    <div>
+                                        <a href="https://clck.ru/K5H6W" title="Cargro" target="_blank">
+                                            <h2>Cargo</h2>
+                                            <p>2017</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="4">
+                                    <div>
+                                        <a href="https://clck.ru/K474b" title="10 Cloverfield Lane" target="_blank">
+                                            <h2> 10 Cloverfield Lane</h2>
+                                            <p>2018</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="5">
+                                    <div>
+                                        <a href="https://clck.ru/K5J7L" title="These Final Hours" target="_blank">
+                                            <h2>These Final Hours</h2>
+                                            <p>2015</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="6">
+                                    <div>
+                                        <a href="https://clck.ru/K5JCh" title="Turbo Kid" target="_blank">
+                                            <h2>Turbo Kid</h2>
+                                            <p>2015</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="7">
+                                    <div>
+                                        <a href="https://clck.ru/K5JKA" title="Dawn of the Planet of the Apes" target="_blank">
+                                            <h2>Dawn of the Planet of the Apes</h2>
+                                            <p>2014</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="8">
+                                    <div>
+                                        <a href="https://clck.ru/K5JZr" title="This Is the End" target="_blank">
+                                            <h2>This Is the End</h2>
+                                            <p>2013</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="9">
+                                    <div>
+                                        <a href="https://clck.ru/K5Jxm" title="Snowpiercer" target="_blank">
+                                            <h2>Snowpiercer</h2>
+                                            <p>2013</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="10">
+                                    <div>
+                                        <a href="https://clck.ru/K5KJJ" title="Seeking a Friend for the End of the World" target="_blank">
+                                            <h2>Seeking a Friend for the End of the World</h2>
+                                            <p>2012</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="11">
+                                    <div>
+                                        <a href="https://clck.ru/K5Kd7" title="Melancholia" target="_blank">
+                                            <h2>Melancholia</h2>
+                                            <p>2011</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="12">
+                                    <div>
+                                        <a href="https://clck.ru/K5KpL" title="Take Shelte" target="_blank">
+                                            <h2>Take Shelte</h2>
+                                            <p>2011</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="13">
+                                    <div>
+                                        <a href="https://clck.ru/K5LF6" title="The Divide" target="_blank">
+                                            <h2>The Divide</h2>
+                                            <p>2011</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="14">
+                                    <div>
+                                        <a href="https://clck.ru/K5LH8" title="The Day" target="_blank">
+                                            <h2>The Day</h2>
+                                            <p>2011</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="15">
+                                    <div>
+                                        <a href="https://clck.ru/K5LJj" title="Legion" target="_blank">
+                                            <h2>Legion</h2>
+                                            <p>2010</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="16">
+                                    <div>
+                                        <a href="https://clck.ru/K5LKY" title="Stake Land" target="_blank">
+                                            <h2>Stake Land</h2>
+                                            <p>2010</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="17">
+                                    <div>
+                                        <a href="https://clck.ru/K5LLm" title="The Road" target="_blank">
+                                            <h2>The Road</h2>
+                                            <p>2009</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="18">
+                                    <div>
+                                        <a href="https://clck.ru/K5LMa" title="Zombieland" target="_blank">
+                                            <h2>Zombieland</h2>
+                                            <p>2009</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="19">
+                                    <div>
+                                        <a href="https://clck.ru/K5LNB" title="Carriers" target="_blank">
+                                            <h2>Carriers</h2>
+                                            <p>2009</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="20">
+                                    <div>
+                                        <a href="https://clck.ru/K5LNZ" title="Wall-E" target="_blank">
+                                            <h2>Wall-E</h2>
+                                            <p>2008</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="21">
+                                    <div>
+                                        <a href="https://clck.ru/K5LPA" title="Sunshine" target="_blank">
+                                            <h2>Sunshine</h2>
+                                            <p>2007</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="22">
+                                    <div>
+                                        <a href="https://clck.ru/K5LPW" title="I am Legend" target="_blank">
+                                            <h2>I am Legend</h2>
+                                            <p>2007</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="23">
+                                    <div>
+                                        <a href="https://clck.ru/K5LQ7" title="The Day After Tomorrow" target="_blank">
+                                            <h2>The Day After Tomorrow</h2>
+                                            <p>2004</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="24">
+                                    <div>
+                                        <a href="https://clck.ru/K5LQj" title="28 Days Later" target="_blank">
+                                            <h2>28 Days Later</h2>
+                                            <p>2002</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-            </section>
-
-            <section class="contacts-section bg-light" id="contacts">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-dark">
-
-
+                        <h3 class="text-center mt-5">Series</h3>
+                        <!-- Аккордеон - Сериалы -->
+                        <div class="accordion accordion-films accordion-series">
+                            <ul>
+                                <li tabindex="1">
+                                    <div>
+                                        <a href="https://clck.ru/K46G2" title="Daybreak" target="_blank">
+                                            <h2>Daybreak</h2>
+                                            <p>2019</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="2">
+                                    <div>
+                                        <a href="https://clck.ru/K5Nbr" title="Black Summer" target="_blank">
+                                            <h2>Black Summer</h2>
+                                            <p>2019</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="3">
+                                    <div>
+                                        <a href="https://clck.ru/JKEoB" title="Lost in Space" target="_blank">
+                                            <h2>Lost in Space</h2>
+                                            <p>2018</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="4">
+                                    <div>
+                                        <a href="https://clck.ru/K5Ncj" title="The Rain" target="_blank">
+                                            <h2>The Rain</h2>
+                                            <p>2018</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="5">
+                                    <div>
+                                        <a href="https://clck.ru/K5Ncy" title="The Handmaid’s Tale" target="_blank">
+                                            <h2>The Handmaid’s Tale</h2>
+                                            <p>2017</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="6">
+                                    <div>
+                                        <a href="https://clck.ru/K5NdS" title="Colony" target="_blank">
+                                            <h2>Colony</h2>
+                                            <p>2016</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="7">
+                                    <div>
+                                        <a href="https://clck.ru/K5Nde" title="Van Helsing" target="_blank">
+                                            <h2>Van Helsing</h2>
+                                            <p>2016</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="8">
+                                    <div>
+                                        <a href="https://clck.ru/" title="The Shannara Chronicles" target="_blank">
+                                            <h2> The Shannara Chronicles</h2>
+                                            <p>2016</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="9">
+                                    <div>
+                                        <a href="https://clck.ru/" title="3&#37;" target="_blank">
+                                            <h2> 3&#37;</h2>
+                                            <p>2016</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="10">
+                                    <div>
+                                        <a href="https://clck.ru/K5NeF" title="Z Nation" target="_blank">
+                                            <h2>Z Nation</h2>
+                                            <p>2015</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="11">
+                                    <div>
+                                        <a href="https://clck.ru/K5NeT" title="Into the Badlands" target="_blank">
+                                            <h2>Into the Badlands</h2>
+                                            <p>2015</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="12">
+                                    <div>
+                                        <a href="https://clck.ru/K5Nfv" title="Mr.Robot" target="_blank">
+                                            <h2>Mr.Robot</h2>
+                                            <p>2015</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="13">
+                                    <div>
+                                        <a href="https://clck.ru/K5Ngj" title="The Last Man on Earth" target="_blank">
+                                            <h2>The Last Man on Earth</h2>
+                                            <p>2015</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="14">
+                                    <div>
+                                        <a href="https://clck.ru/K5NhW" title="Zoo" target="_blank">
+                                            <h2>Zoo</h2>
+                                            <p>2015</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="15">
+                                    <div>
+                                        <a href="https://clck.ru/JKEoy" title="The 100" target="_blank">
+                                            <h2>The 100</h2>
+                                            <p>2014</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="16">
+                                    <div>
+                                        <a href="https://clck.ru/K5Ni3" title="Attack on Titan" target="_blank">
+                                            <h2>Attack on Titan</h2>
+                                            <p>2013</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="17">
+                                    <div>
+                                        <a href="https://clck.ru/K5NiM" title="Black mirror" target="_blank">
+                                            <h2>Black mirror</h2>
+                                            <p>2011</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="18">
+                                    <div>
+                                        <a href="https://clck.ru/K5Nid" title="The Walking Dead" target="_blank">
+                                            <h2>The Walking Dead</h2>
+                                            <p>2010</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="19">
+                                    <div>
+                                        <a href="https://clck.ru/K5Nio" title="Jericho" target="_blank">
+                                            <h2>Jericho</h2>
+                                            <p>2008</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h3 class="text-center mt-5">Books</h3>
+                        <!-- Аккордеон - Книги -->
+                        <div class="accordion accordion-films accordion-books">
+                            <ul>
+                                <li tabindex="1">
+                                    <div>
+                                        <a href="#extra_info" title="The Road">
+                                            <h2>The Road</h2>
+                                            <p>by Cormac McCarthy</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="2">
+                                    <div>
+                                        <a href="#extra_info" title="The Stand">
+                                            <h2>The Stand</h2>
+                                            <p>by Stephen King</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="3">
+                                    <div>
+                                        <a href="#extra_info" title="Hollow Kingdom">
+                                            <h2>Hollow Kingdom</h2>
+                                            <p>by Kira Jane Buxton</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="4">
+                                    <div>
+                                        <a href="#extra_info" title="A Boy and His Dog at the End of the World">
+                                            <h2>A Boy and His Dog at the End of the World</h2>
+                                            <p>by C.A. Fletcher</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="5">
+                                    <div>
+                                        <a href="#extra_info" title="World War Z">
+                                            <h2>World War Z</h2>
+                                            <p>by Max Brooks</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="6">
+                                    <div>
+                                        <a href="#extra_info" title="Earth Abides">
+                                            <h2>Earth Abides</h2>
+                                            <p>by George R Stewart</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="7">
+                                    <div>
+                                        <a href="#extra_info" title="Oryx and Crake">
+                                            <h2>Oryx and Crake</h2>
+                                            <p>by Margaret Atwood</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="8">
+                                    <div>
+                                        <a href="#extra_info" title="I Am Legend">
+                                            <h2>I Am Legend</h2>
+                                            <p>by Richard Matheson</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="9">
+                                    <div>
+                                        <a href="#extra_info" title="One Second After">
+                                            <h2>One Second After</h2>
+                                            <p>by William R Forstchen</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="10">
+                                    <div>
+                                        <a href="#extra_info" title="A Canticle for Leibowitz">
+                                            <h2>A Canticle for Leibowitz</h2>
+                                            <p>by Walter M. Miller, Jr.</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="11">
+                                    <div>
+                                        <a href="#extra_info" title="The Passage">
+                                            <h2>The Passage</h2>
+                                            <p>by Justin Cronin</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="12">
+                                    <div>
+                                        <a href="#extra_info" title="Alas, Babylon">
+                                            <h2>Alas, Babylon</h2>
+                                            <p>by Pat Frank</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="13">
+                                    <div>
+                                        <a href="#extra_info" title="The Day of the Triffids">
+                                            <h2>The Day of the Triffids</h2>
+                                            <p>by John Wyndham</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="14">
+                                    <div>
+                                        <a href="#extra_info" title="Swan Song">
+                                            <h2>Swan Song</h2>
+                                            <p>by Robert McCammon</p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li tabindex="15">
+                                    <div>
+                                        <a href="#extra_info" title="The Book of M: A Novel">
+                                            <h2>The Book of M: A Novel</h2>
+                                            <p>by Peng Shepherd</p>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </section>
-
-        </article>
+            </div>
+        </section>
+        <section class="contacts-section" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <div class="area">Contacts</div>
+                        <div class="area-mail">&#9993;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row columns-class d-flex flex-column">
+                <div class="col pb-5">
+                    <!-- Контакт-форма-->
+                    <div class="contact-form">
+                        <form>
+                            <div class="col-lg-4 col-md-4 col-sm-12">
+                                <h2 class="text-light pb-3">Get in touch with us</h2>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-12 right">
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Your Name" name="#">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-lg" placeholder="YourEmail@email.com" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control form-control-lg"></textarea>
+                                </div>
+                                <input type="submit" class="btn btn-secondary btn-block" value="Send" name="#">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col pb-5">
+                    <div class="map-responsive">
+                        <h2 class="text-light pb-3">Headquarters</h2>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.2577258195547!2d27.523231051595744!3d53.92716498000713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbc57aa1576e87%3A0xb3817895da6c3101!2sPalace%20of%20Independence!5e0!3m2!1sen!2sby!4v1574269307986!5m2!1sen!2sby"
+                            height="300" frameborder="1" style="border:1;" allowfullscreen=""></iframe>
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- "Подвал " -->
-    <footer class="page-footer bg-danger">
-        <div class="footer-copyright text-center py-3">&copy; 2019 Copyright:
-            <a href="#" class="text-white"> APOCALYPSE TOMORROW</a>
+    <footer class="page-footer bg-dark">
+        <div class="footer-copyright text-center py-3 text-white">&copy; 2019 Copyright:
+            <a href="#" class="text-danger"> APOCALYPSE TOMORROW</a>
         </div>
     </footer>
-
 
     <!-- Подключение JS -->
     <script type="text/javascript" src="main.js"></script>
