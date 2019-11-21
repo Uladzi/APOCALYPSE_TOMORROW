@@ -391,8 +391,10 @@
     }
     .accordion-films ul li div a * {
         opacity: 1;
+        transform: rotate(0deg);
     }
     .accordion-films ul li div a h2 {
+        opacity: 1;
         text-align: center;
         font-size: 1rem;
         top: 0.15rem;
@@ -403,14 +405,7 @@
         font-size: 0.5rem;
         top: 0.1rem;
     }
-    .accordion-books ul li div a * {
-        transform: rotate(0deg);
-    }
     .accordion-books ul:hover li:hover a * {
         transform: rotate(0deg);
-    }
-    .accordion-books ul li div a p {
-        margin-top: -1rem;
-        font-size: small;
     }
 }
