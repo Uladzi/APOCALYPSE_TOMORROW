@@ -63,7 +63,7 @@
     #suddenly-pic {
         top: 2rem;
         position: fixed;
-        animation: suddenly-pic 2s forwards;
+        animation: suddenly-pic 2.5s forwards;
     }
     
     header .container-fluid {

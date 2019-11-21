@@ -4,6 +4,10 @@
     width: 100%;
 }
 
+audio {
+    height: 1rem;
+}
+
 .about-us-section .row {
     height: 100%;
     min-height: 100vh;
