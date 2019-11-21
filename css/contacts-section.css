@@ -72,6 +72,7 @@ iframe {
         display: none;
     }
     .area-mail {
+        animation: blur .75s ease-out infinite;
         padding-top: 6rem;
     }
     .map-responsive {

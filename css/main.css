@@ -47,10 +47,9 @@
     html {
         scroll-behavior: smooth;
     }
-    
-    #suddenly-pic {
+    /* #suddenly-pic {
         position: fixed;
-    }
+    } */
     
     header .container-fluid {
         padding: 0;
