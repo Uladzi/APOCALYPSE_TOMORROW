@@ -44,6 +44,9 @@
 }
 
 @media only all and (max-width: 450px) {
+    .apocalypse-is-class {
+        border: none !important;
+    }
     .about-apocalypse-section h2 {
         font-weight: bold;
     }

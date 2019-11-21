@@ -37,6 +37,11 @@
     text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
 }
 
+.contact-columns-class {
+    width: 100%;
+    margin: 0;
+}
+
 .contact-form {
     margin: 5rem 0;
     position: relative;
@@ -47,7 +52,7 @@
 }
 
 .contact-form .right {
-    max-width: 600px;
+    max-width: 37.5rem;
 }
 
 .contact-form .right .form-control::placeholder {
@@ -60,14 +65,14 @@ iframe {
 }
 
 @media only all and (max-width: 550px) {
+    .contact-columns-class {
+        margin-top: -7rem;
+    }
     .area {
         display: none;
     }
     .area-mail {
         padding-top: 6rem;
-    }
-    .contact-form {
-        width: 100%;
     }
     .map-responsive {
         display: none;
