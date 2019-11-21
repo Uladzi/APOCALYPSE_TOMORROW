@@ -3,4 +3,4 @@
 This project is implemented as the It-academy graduation task 
 
 #### deployed:
-https://appocalypse-tomorrow.netlify.com/
+https://uladzi.github.io/APOCALYPSE_TOMORROW/
