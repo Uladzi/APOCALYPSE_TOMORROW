@@ -1,8 +1,8 @@
-    @import "_about_us_section.css";
-    @import "_about_apocalypse_section.css";
-    @import "_survival_tips_section.css";
-    @import "_extra_info_section.css";
-    @import "_contacts_section.css";
+    @import "about-us-section.css";
+    @import "about-apocalypse-section.css";
+    @import "survival-tips-section.css";
+    @import "extra-info-section.css";
+    @import "contacts-section.css";
     /* Подключили шрифт */
     
     @font-face {
