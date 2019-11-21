@@ -37,15 +37,21 @@
     text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
 }
 
-.columns-class {
-    width: 100%;
-    margin: 0;
-    text-align: -webkit-center !important;
-    text-align: center;
+.contact-form {
+    margin: 5rem 0;
+    position: relative;
 }
 
-.contact-form {
-    width: 60%;
+.contact-form h2 {
+    padding: 2em 1px;
+}
+
+.contact-form .right {
+    max-width: 600px;
+}
+
+.contact-form .right .form-control::placeholder {
+    font-size: 1rem;
 }
 
 iframe {
